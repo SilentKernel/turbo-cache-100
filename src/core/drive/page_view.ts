@@ -15,7 +15,7 @@ export interface PageViewDelegate extends ViewDelegate<HTMLBodyElement, PageSnap
 type PageViewRenderer = PageRenderer | ErrorRenderer
 
 export class PageView extends View<HTMLBodyElement, PageSnapshot, PageViewRenderer, PageViewDelegate> {
-  readonly snapshotCache = new SnapshotCache(10)
+  readonly snapshotCache = new SnapshotCache(100)
   lastRenderedLocation = new URL(location.href)
   forceReloaded = false
 
